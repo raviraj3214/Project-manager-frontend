@@ -87,7 +87,7 @@ export default function Card({ task, isOpen, toggleDisclosure }) {
                       <div className={active && styles.active}>Share</div>
                     )}
                   </Menu.Item>
-
+                
                   <Menu.Item
                     onClick={toggleDeleteModal}
                     className={styles.menuItem}

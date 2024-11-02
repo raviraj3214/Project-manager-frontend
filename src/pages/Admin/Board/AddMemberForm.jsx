@@ -28,7 +28,7 @@ const AddMemberForm = ({ toggleModal }) => {
       if (data.status) { 
         setShowSuccessMessage(true); 
       } else {
-        toast.error("Failed to add member."); 
+        toast.error(data.message); 
       }
 
     
