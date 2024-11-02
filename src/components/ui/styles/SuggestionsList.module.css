@@ -1,0 +1,51 @@
+.suggestionsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 100000;
+  }
+  
+  .suggestionItem {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 100000;
+  }
+  
+  .suggestionItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 235, 235, 1);
+
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    padding: 6px;
+    font-weight: 600;
+  }
+  
+  .email {
+    flex-grow: 1;
+  }
+  
+  .assignButton {
+    background-color: #ffffff;
+    color: rgba(118, 117, 117, 1);
+    border: 1px solid rgba(226, 226, 226, 1);
+    padding: 4px 8px;
+    border-radius: 8px;
+    width: 8vw;
+    cursor: pointer;
+  }
+  
