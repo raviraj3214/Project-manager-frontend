@@ -20,7 +20,7 @@ export default function AuthProvider({ children }) {
     if (savedUser) {
       setUser(savedUser);
     }
-    setIsLoading(false); // Loading complete after checking localStorage
+    setIsLoading(false); 
   }, []);
 
   const login = (data) => {

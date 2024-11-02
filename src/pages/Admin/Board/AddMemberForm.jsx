@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styles from './styles/AddMemberForm.module.css';
+import toast from 'react-hot-toast';
 
 const AddMemberForm = ({ toggleModal }) => {
   const [email, setEmail] = useState('');
@@ -22,15 +23,18 @@ const AddMemberForm = ({ toggleModal }) => {
           credentials: 'include',
         }
       );
-      // setEmail('');
 
-       if(res.json().status){
-      setShowSuccessMessage(true); // Show success message
-       }
+      const data = await res.json(); 
+      if (data.status) { 
+        setShowSuccessMessage(true); 
+      } else {
+        toast.error("Failed to add member."); 
+      }
 
     
     } catch (err) {
       console.error(err.message);
+      toast.error(err.message);
     }
     setIsLoading(false);
   };

@@ -85,7 +85,7 @@ export default function Board() {
 
       {isAddMemberOpen && (
         <Modal toggleModal={toggleAddMemberModal}>
-          <AddMemberForm toggleModal={toggleAddMemberModal} /> {/* AddMemberForm inside modal */}
+          <AddMemberForm toggleModal={toggleAddMemberModal} /> 
         </Modal>
       )}
     </div>
