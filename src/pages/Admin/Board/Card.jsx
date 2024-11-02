@@ -12,6 +12,8 @@ import styles from './styles/Card.module.css';
 import copyLink from '../../../utils/copyLink';
 import toast from 'react-hot-toast';
 
+
+
 const categories = [
   { id: 1, title: 'Backlog', value: 'backlog' },
   { id: 2, title: 'To do', value: 'todo' },
@@ -109,8 +111,11 @@ export default function Card({ task, isOpen, toggleDisclosure }) {
           </div>
         </div>
 
-        <Text step={5} weight="500">
+        {/* <Text step={5} weight="500">
           {task.title}
+        </Text> */}
+        <Text step={5} weight="500" title= {task.title}  >
+               {task.title.length > 50 ? `${task.title.slice(0, 22)}...` : task.title}
         </Text>
 
         <CheckLists

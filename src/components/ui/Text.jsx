@@ -9,6 +9,7 @@ export default function Text({
   color = 'inherit',
   style,
   className,
+  title
 }) {
   let stepStyle;
 
@@ -50,6 +51,7 @@ export default function Text({
         ...style,
       }}
       className={`${stepStyle} ${styles.text} ${className}`}
+      title={title}
     >
       {children}
     </p>
